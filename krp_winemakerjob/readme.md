@@ -37,7 +37,7 @@ INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_
 ('winemaker', 0, 'tempworker', 'Temp Worker', 1500, '{}', '{}'),
 ('winemaker', 1, 'worker', 'Worker', 1800, '{}', '{}'),
 ('winemaker', 2, 'manager', 'Manager', 2100, '{}', '{}'),
-('winemaker', 3, 'owner', 'Owner', 2700, '{}', '{}');
+('winemaker', 3, 'boss', 'Owner', 2700, '{}', '{}');
 
 
 ##Insert This into ox_inventory/data/items##
