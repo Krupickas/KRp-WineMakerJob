@@ -24,8 +24,8 @@ AddEventHandler('krp_winemaker_processgrapes', function(itemValue)
             else
                 TriggerClientEvent('esx:showNotification', _source, _U('you_made_wine'))
                 xPlayer.removeInventoryItem('wine_bottle', 1)
-                xPlayer.removeInventoryItem('crushed_white_grape', 3)
-                xPlayer.addInventoryItem('white_wine', 1)
+                xPlayer.removeInventoryItem('crushed_grape', 3)
+                xPlayer.addInventoryItem('red_wine', 1)
             end
         end)
     elseif _itemValue == 'white_wine' then
@@ -53,11 +53,13 @@ AddEventHandler('krp_winemaker_processgrapes', function(itemValue)
  end)
 
 
- ESX.RegisterServerCallback('krp_winemaker_checkitems_forprocess', function(source, cb, item)
+ ESX.RegisterServerCallback('krp_winemaker_checkitems_forprocess', function(source, cb, item, item2)
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
     local items = xPlayer.inventory
-    cb(exports.ox_inventory:Search(source, 'count', item))
+    local prvy = exports.ox_inventory:Search(source, 'count', item)
+    local druhy = exports.ox_inventory:Search(source, 'count', item2)
+    local data = {prvy = prvy, druhy = druhy}
   end)
 
   
