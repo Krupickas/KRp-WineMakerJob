@@ -33,7 +33,7 @@ AddEventHandler('krp:winemaker:sell:white_wine', function()
 		local item = xPlayer.inventory[i]
 
 		if item.name == "white_wine" then
-			dwhitew = item.count
+			whitew = item.count
 		end
 	end
     
