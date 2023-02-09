@@ -78,7 +78,6 @@ RegisterNetEvent('process_grepe', function(data)
                         if ano.prvy >= 3 then
                             if ano.druhy >= 1 then
                               TriggerServerEvent('krp_winemaker_processgrapes', 'red_wine')
-    
                                 local plasticbox = CreateObject('v_serv_plastic_box', -50.0128, 1898.6105, 195.15, true, true, true)
                                 local grapefruit = CreateObject('prop_grapes_01', -50.7953, 1898.8839, 195.1660, true, true, true)
                                 lib.progressBar({
