@@ -1,3 +1,5 @@
+TriggerEvent('esx_society:registerSociety', 'winemaker', 'WineMaker', 'society_winemaker', 'society_winemaker', 'society_winemaker', {type = 'private'})
+
 RegisterServerEvent('krp_winemaker_pickupgrapes')
 AddEventHandler('krp_winemaker_pickupgrapes', function(itemValue)
     local _source = source
