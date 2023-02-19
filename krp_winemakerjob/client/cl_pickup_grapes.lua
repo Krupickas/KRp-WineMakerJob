@@ -103,12 +103,17 @@ exports.qtarget:AddCircleZone("bossmenu", vec3(-1897.7615, 2068.8508, 140.4808),
         {
             action = function()
                 if Config.esxsociety then
-                    TriggerEvent('esx_society:openBossMenu', 'winemaker', function(data, menu)
-                    end, { wash = false }) -- disable washing money
+                        local society = 'winemaker'
+                        local amount  = 100
+
+TriggerEvent('esx_society:openBossMenu', society, function (data, menu)
+	menu.close()
+end, {wash = false}) -- set custom options, e.g disable washing
                 end
             end,
             icon = "fas fa-credit-card",
-            label = _U('boss_menu')
+            label = _U('boss_menu'),
+            job = 'winemaker'
         }
     },
     distance = 1.5
