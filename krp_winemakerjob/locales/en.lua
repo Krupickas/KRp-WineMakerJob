@@ -13,6 +13,12 @@ Locales['en'] = {
   ['white_grape'] = 'White Grape',
   ['wine_bottle'] = 'Wine bottle',
 
+  -- INPUT
+  ['how_much_to_sell'] = 'How much you want to sell',
+  ['how_much'] = 'How much ?',
+
+
+
   -- NOTIFICATION SYSTEM
   ['you_dont_have_enought_money'] = 'You dont have enough money',
   ['dont_have_grapes'] = 'You dont have enough grapes',
@@ -20,7 +26,7 @@ Locales['en'] = {
   ['you_dont_have_enough_crushed_white'] = 'You dont have enough crushed white grapes',
   ['you_dont_have_enough_crushed_red'] = 'You dont have enough crushed grapes',
   ['sucessfully_crushed'] = 'You sucessfully crushed grapes',
-  ['you_need_more_bottles'] = 'You need atleast 10 bottles to sell',
+  ['you_need_more_bottles'] = 'You dont have enough wine',
   ['you_made_wine'] = 'You sucessfully made wine !',
 
   -- TARGET / EYE
