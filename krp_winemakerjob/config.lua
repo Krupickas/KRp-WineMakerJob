@@ -14,9 +14,9 @@ Config.CompanyVehicle = 'burrito3' -- company vehicle
 
 Config.BottlePrice = 10 -- for 1 bottle
 
-Config.RedWinePrice = 1200 -- For 10 bottles of wine 
+Config.RedWinePrice = 1200 -- For 1 bottle
 
-Config.WhiteWinePrice = 1000 -- For 10 bottles of wine 
+Config.WhiteWinePrice = 1000 -- For 1 bottle 
 
 Config.BlipsForEveryone = {
     
