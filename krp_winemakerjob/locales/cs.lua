@@ -20,10 +20,14 @@ Locales['cs'] = {
         ['you_dont_have_enough_crushed_white'] = 'Nemáte dost rozdrcených bílých hroznů',
         ['you_dont_have_enough_crushed_red'] = 'Nemáte dostatek drcených hroznů',
         ['sucessfully_crushed'] = 'Úspěšně jste rozdrtili hrozny',
-        ['you_need_more_bottles'] = 'K prodeji potřebujete alespoň 10 lahví',
+        ['you_need_more_bottles'] = 'Nemáš dostatek vína na prodej',
         ['you_made_wine'] = 'Úspěšně jste vyrobili víno!',
       
-      
+       -- INPUT-
+
+        ['how_much_to_sell'] = 'Kolik chcete prodat',
+        ['how_much'] = 'Kolik?',
+
         -- TARGET / EYE
         ['wine_bottles_seller_eye'] = 'Prodejce lahví vína',
         ['crush_grapes'] = 'Drcení hroznů',
