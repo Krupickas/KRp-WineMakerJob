@@ -1,4 +1,4 @@
-RegisterNetEvent('sell_wine_as_item', function()
+RegisterNetEvent('sell_wine_as_item', function(sellprice, redwinequantity)
 
     lib.registerContext({
         id = 'sellwine',
@@ -9,21 +9,15 @@ RegisterNetEvent('sell_wine_as_item', function()
                 icon = 'bottle-water',
                 arrow = true,
                 onSelect = function()
-                    lib.progressCircle({
-                        duration = 5300,
-                        position = 'bottom',
-                        useWhileDead = false,
-                        canCancel = false,
-                        disable = {
-                            car = true,
-                            move = true,
-                        },
-                        anim = {
-                            dict = 'misscarsteal4@actor',
-                            clip = 'actor_berating_loop'
-                        },
-                    })
-                        TriggerServerEvent('krp:winemaker:sell:red_wine')
+                    local input = lib.inputDialog(_U('how_much_to_sell'), {_U('how_much')})
+
+                    if not input then return end
+                    local lockerNumber = tonumber(input[1])
+                    sellprice = Config.RedWinePrice
+                    redwinequantity = tonumber(input[1])
+                    sellpricetag = (sellprice * redwinequantity)
+                    TriggerServerEvent("krp_winemaker:sellredwine",redwinequantity, sellpricetag)
+
             end
             },
             {
@@ -31,21 +25,15 @@ RegisterNetEvent('sell_wine_as_item', function()
                 icon = 'bottle-water',
                 arrow = true,
                 onSelect = function()
-                    lib.progressCircle({
-                        duration = 5300,
-                        position = 'bottom',
-                        useWhileDead = false,
-                        canCancel = false,
-                        disable = {
-                            car = true,
-                            move = true,
-                        },
-                        anim = {
-                            dict = 'misscarsteal4@actor',
-                            clip = 'actor_berating_loop'
-                        },
-                    })
-                        TriggerServerEvent('krp:winemaker:sell:white_wine')
+                    local input = lib.inputDialog(_U('how_much_to_sell'), {_U('how_much')})
+
+                    if not input then return end
+                    local whitewine = tonumber(input[1])
+                    sellpriceWhite = Config.WhiteWinePrice
+                    whitewinequantity = tonumber(input[1])
+                    sellpricetagWhite = (sellpriceWhite * whitewinequantity)
+                    TriggerServerEvent("krp_winemaker:sellwhitewine",whitewinequantity, sellpricetagWhite)
+
             end
             },
         }
